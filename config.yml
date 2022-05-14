@@ -1,0 +1,95 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                        EP-UHC                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+#Configurations des messages personnalisé lié au plugin
+messages:
+
+  # Message des victoires
+  # - {team} correspond a la team ayant gagné
+  win: "&c[&6EP-UHC&c] - &bL'équipe {team} &ba remporté la partie !"
+  
+  # Message de mort
+  death: "&c[&6EP-UHC&c] - &9Vous &bêtes mort !"
+  
+  # Message de kill
+  # - {killer} correspond au joueur ayant tué
+  # - {victim} correspond au joueur ayant été tué
+  kill: "&c[&6EP-UHC&c] - &9{victim} &best mort !"
+  
+  # Message lorsque le jeu est déja lancé
+  started: "&c[&6EP-UHC&c] - &bLe jeu est déjà lancé !"
+  
+  # Message d'arrivée sur le serveur
+  # - {player} correspond au joueur ayant rejoint le serveur
+  # - {nbPlayers} correspond au nombre de joueurs sur le serveur
+  join: "&c[&6EP-UHC&c] - &9{player} &ba rejoint le serveur ! &7<{nbPlayers}/50>"
+  reconnect: "&c[&6EP-UHC&c] - &9{player} &bs'est reconnecté"
+  
+  # Message de départ du serveur
+  # - {player} correspond au joueur ayant rejoint le serveur
+  quit: "&c[&6EP-UHC&c] - &9{player} &ba quitté le serveur !"
+  
+  # Message durant la periode d'invincibilitée
+  # - {timer} correspond au temps avant la fin de la periode
+  GraceReminder: "&c[&6EP-UHC&c] - &bFin de la periode d'invincibilitée dans &9{timer} &bsecondes"
+  GraceEnd: "&c[&6EP-UHC&c] - &bFin de la periode d'invincibilitée"
+  
+  
+  # Message de lancement du jeu
+  start: "&c[&6EP-UHC&c] - &bLancement du jeu. Veuillez patientez durant la téléportation"
+  
+  # Message durant la periode de farming
+  # - {timer} correspond au temps avant le pvp
+  FarmReminder: "&c[&6EP-UHC&c] - &bLe PvP sera activé dans &9{timer} &bminutes"
+  
+  # Message de début du pvp
+  pvp: "&c[&6EP-UHC&c] - &9PVP &bactivé !"
+  
+  # Message si la partie n'est pas lancée
+  stopped: "&c[&6EP-UHC&c] - &bIl n'y a pas de partie en cours !"
+
+  # Message sur la bordure:
+  # - {timer} correspond au temps avant la reduction de la bordure
+  borderReminder: "&c[&6EP-UHC&c] - &bLa bordure se réduira dans &9{timer} &bminutes"
+  borderReduction: "&c[&6EP-UHC&c] - &bLa bordure commence à se réduire"
+  
+#Configurations des timers personnalisé lié au plugin
+timers:
+
+  # Timer pour le début de l'uhc
+  start: 10
+  
+  # Timer phase de farming
+  farming: 1800
+  
+  # Timer phase de pvp
+  pvp: 1800
+  
+  # Timer réduction de bordure
+  borderReductionTime: 1800
+  
+#Configuration de la bordure
+border:
+  # Timer pour le début de la réduction de la bordure (Attention, le timer est à initialiser en supposant que la periode de pvp vien de s'activer)
+  start: 10  
+  # Taille de la bordure (en bloc) (+- size)
+  size: 1500.0
+
+#Configuration des parametres propre a une game d'UHC Collecte
+features:
+  messages:
+    # - {leader} correspond au leader de l'équipe
+    leader: "&c[&6EP-UHC&c] - &e{leader} &9est le chef de votre équipe !"
+    
+    #Messages liée aux l'events de collecte
+    collecte: 
+      # - {item} correspond à l'item à recuperer
+      # - {time} correspond au temps de collecte
+      start: "&c[&6EP-UHC&c] - &eNouvelle collecte!"
+      item: "&aVous avez &e{time} &a pour recuperer un maximum de &e{item}"
+      end: "&c[&6EP-UHC&c] - &eLa collecte est maintenant terminée ! Voici les resultats:"
+  timers:
+    collectetime: 1200

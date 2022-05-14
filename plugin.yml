@@ -1,0 +1,23 @@
+name: EP-UHC
+version: 1.0
+author: a6st
+main: fr.a6st.epuhccollecte.Main
+depend: [WorldEdit]
+commands:
+  uhc:
+    description: Pour lancer la partie
+    permission: epuhc.uhc.use 
+  tn:
+    description: Pour changer le nom de la team
+  revive:
+    description: Pour faire revivre un joueur
+    permission: epuhc.revive.use
+  fheal:
+    description: Heal tout les joueurs
+    permission: epuhc.fheal.use
+  pos:
+    description: Envoie tes coordonnees a tes equipiers
+  toggleboard:
+    description: Activer ou desactiver le scoreboard et la tablist
+  structures:
+    description: Affiche les coordonnees de toutes les structures existantes
